@@ -1,0 +1,61 @@
+/*==================== Scroll Up ====================*/
+.scrollup {
+    position: fixed;
+    right: 1.6rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    opacity: .8;
+    padding: 0 .5rem;
+    border-radius: 50%;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+
+    &:hover {
+        background-color: var(--first-color-alt);
+    }
+
+    &__icon {
+        font-size: 2.4rem;
+        color: #fff;
+
+        @include respond (normal-desktop) {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.show-scroll {
+    bottom: 8rem;
+
+    @include respond (normal-desktop) {
+        bottom: 1.5rem;
+    }
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme {
+    font-size: 2rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--first-color);
+    }
+}
+
+/*==================== Scroll Bar ====================*/
+::-webkit-scrollbar {
+    width: 1rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .8rem;
+
+    &:hover {
+        background-color: var(--text-color-light);
+    }
+}

@@ -1,0 +1,137 @@
+.home {
+
+    &__container {
+        gap: 1.6rem;        
+    }
+
+    &__content {
+        grid-template-columns: .5fr 3fr;
+        padding-top: 5.6rem;
+        align-items: center;
+        position: relative;
+
+        @include respond (tab-port) {
+            grid-template-columns: max-content 1fr 1fr;
+        }
+
+        @include respond (normal-desktop) {
+            text-align: center;
+        }
+
+        
+    }
+
+    &__social {
+        display: grid;
+        grid-template-columns: max-content;
+        row-gap: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+    
+    &__social-icon {
+        font-size: 2rem;
+        color: var(--first-color);
+        
+        &:hover {
+            color: var(--first-color-alt);
+        }
+    }
+
+    &__img {
+        margin-bottom: 4rem;
+        justify-self: center;
+
+        @include respond (tab-port) {
+            order: 1;
+            justify-self: center;
+        }
+    }
+
+    &__blob {
+        width: 185px;
+        fill: var(--first-color);
+
+        @include respond (tab-port) {
+         width: 255px;   
+        }
+
+        @include respond (normal-desktop) {
+            width: 320px; 
+        }
+    }
+
+    &__blob-img {
+        width: 170px;
+        transform: scale(2.4);
+    }
+
+    &__data {
+        grid-column: 1/3;
+
+        @include respond (tab-port) {
+            grid-column: initial;
+            padding-left: 5rem;
+
+        }
+
+        @include respond (normal-desktop) {
+            text-align: left;
+
+        }
+    }
+
+    &__title {
+        font-size: var(--big-font-size);
+    }
+
+    &__subtitle {
+        font-size: var(--h3-font-size);
+        color: var(--text-color);
+        font-weight: var(--font-medum);
+        margin-bottom: var(--mb-0-75);
+    }
+
+    &__description {
+        margin-bottom: var(--mb-2);
+        font-size: var(--normal-font-size);
+    }
+
+    &__scroll {
+        display: none;
+
+        @include respond (normal-desktop) {
+            display: block;
+        }
+
+        &-button {
+            @include respond (normal-desktop) {
+                margin-left: 3rem;
+            }
+        }
+    }
+
+    &__scroll-button {
+        color: var(--first-color);
+        transition: .3s;
+
+        &:hover {
+            transform: translateY(.25rem);
+        }
+    }
+
+    &__scroll-mouse {
+        font-size: 3.2rem;
+    }
+
+    &__scroll-name {
+        font-size: var(--small-font-size);
+        color: var(--title-color);
+        font-weight: var(--font-medum);
+        margin-right: var(--mb-0-25);
+    }
+
+    &__scroll-arrow {
+        font-size: 2rem;
+    }
+
+}

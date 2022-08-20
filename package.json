@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "landig page of portfolio website",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ali",
+  "license": "ISC",
+  "devDependencies": {}
+}

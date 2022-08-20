@@ -1,0 +1,26 @@
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+    padding: 3.2rem 0 6.4rem;
+
+    @include respond (normal-desktop) {
+        padding: 1rem 0 3rem;
+    }
+
+    &__title {
+        font-size: var(--h1-font-size);
+        color: var(--title-color);
+        text-align: center;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: var(--small-font-size);
+        margin-bottom: var(--mb-3);
+        text-align: center;
+
+        @include respond (normal-desktop) {
+            margin-bottom: 3rem;
+        }
+    }
+
+}

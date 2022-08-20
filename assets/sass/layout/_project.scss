@@ -1,0 +1,58 @@
+.project {
+    text-align: center;
+    @include respond (normal-desktop) {
+        text-align: initial
+    }
+
+    @include respond (tab-port) {
+        &__container {
+            @include grid_template-columns;  
+
+            @include respond (normal-desktop) {
+                background-color: var(--first-color-second);
+                border-radius: 1rem;
+                padding: 3rem 2.5rem 0;
+                grid-template-columns: 1fr max-content;
+                column-gap: 3rem;
+            }
+        }   
+    }
+
+    &__data {
+        padding-top: .8rem;
+
+        @include respond (normal-desktop) {
+            height: 250px;
+        } 
+        
+    }
+
+
+    &__bg {
+        background-color: var(--first-color-second);
+        padding-top: 4.8rem;
+
+        @include respond (normal-desktop) {
+            background: none;
+        }  
+    }
+
+    &__title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-0-75);
+        color: #fff;
+    }
+
+    &__description {
+        margin-bottom: var(--mb-1-5);
+        color: #fff;
+        font-size: var(--small-font-size);
+    }
+
+    &__img {
+        width: 232px;
+        justify-self: center;
+    }
+
+
+}

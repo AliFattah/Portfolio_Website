@@ -1,0 +1,23 @@
+@mixin grid_template-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone-land {
+        @media (min-width: 18.75em) { @content }; // 300px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (min-width: 37.5em) { @content }; // 600px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (min-width: 56.25em) { @content }; // 900px
+    }
+
+    @if $breakpoint == normal-desktop {
+        @media (min-width: 75em) { @content }; // 1000px
+    }
+
+}

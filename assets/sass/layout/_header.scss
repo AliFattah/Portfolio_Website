@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+
+    @include respond (tab-port) {
+        top: 0;  
+        bottom: initial;
+    }
+
+    @include respond (normal-desktop) {
+        padding: 0;
+    }
+}

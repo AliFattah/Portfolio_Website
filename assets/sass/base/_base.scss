@@ -1,0 +1,73 @@
+/*==================== BASE ====================*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    // This defines what 1 rem is
+    font-size: 50%;  //1 rem = 8 px => 8/16 = 50%
+
+    @include respond (phone-land) {
+        font-size: 53%;  //1 rem = 8.5 px => 8.5/16 = 53%
+    }
+
+    @include respond (tab-port) {
+        font-size: 56.25%;  //1 rem = 9 px => 9/16 = 56%
+    }
+
+    @include respond (tab-land) {
+        font-size: 59%;  //1 rem = 9.5 px => 9.5/16 = 59%
+    }
+
+    @include respond (normal-desktop) {
+        font-size: 100%;  //1 rem = 10 px => 10/16 = 62.5%
+    }
+}
+
+body {
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+main {
+    @include respond (normal-desktop) {
+        padding: 0;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.active-link {
+    color: var(--first-color);
+}
+
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+}
